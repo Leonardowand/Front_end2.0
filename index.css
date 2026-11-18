@@ -1,3 +1,12 @@
+:root {
+    --cor-principal: #2c3e50;
+    --cor-secundaria: #3498db;
+    --cor-fundo: #f4f6f7;
+    --espacamento-padrao: 1.5rem;
+    --raio-borda: 8px;
+}
+
+
 body{
     color: #000000;
     background-color: #f1f0f0;
@@ -5,26 +14,133 @@ body{
 }
 
 h2{
-    font-size: 18px;
+    font-size: 1.5rem; /* ajuste o tamanho da fonte conforme pedido no exercício */
+    margin-top: 40px; /*cria distancia e espaço do h2 para borda*/
+    margin-bottom: 20px;
 }
 
 
-img { 
-
-width: 250px;
-height: 200px;
-}
 
 .container-veiculos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     width: 100%;
     margin-top: 30px;
 }
+
+.container-veiculos .bloco-veiculo {
+
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* adiciona transições suaves */
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.container-veiculos .bloco-veiculo.ativo{
+    display: flex;
+}
+
+.container-veiculos .bloco-veiculo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+   margin-bottom: 15px;
+}
+
+.container-veiculos .bloco-veiculo:hover {
+    transform: translateY(-6px); /* levanta o card ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* aumenta a sombra para dar profundidade */
+}
+
+
 
 header h1 {
     background-color: #f1f0f0;
     padding: 20px;
     text-align: center; /* centralizar apenas o título */
 }
+
+/*flexbox para navegação */
+header nav ul {
+    display: flex;
+    justify-content: center; /* centraliza os links horizontalmente */
+    gap: 20px; /* espaçamento entre os links */
+    padding: 15px;
+    background-color:#000000;;
+}
+
+header nav ul li {
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease; /* adiciona uma transição suave */
+}
+
+/*hover exigido passo 1 aula 07*/
+header nav ul li:hover {
+    color:#caf6bc;
+    transform: scale(1.1); /* aumenta o tamanho do link ao passar o mouse */
+}
+
+ /*estilizando o formulário */
+.form{
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: var(--raio-borda);
+    padding: var(--espacamento-padrao);
+    max-width: 600px;
+    margin: 20px auto;
+}
+    #formulario-estilo {
+     border: 2px solid var(--cor-secundaria);
+    }
+
+
+.container-midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*alinhar video horizontalmente*/
+    justify-content: center; 
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*aumentar o tamanho do video e dar um espaçamento bonito*/
+.container-midia video {
+    width: 640px; /* largura do vídeo */
+    height: 360px; /* altura do vídeo */
+    margin-top: 20px; /* espaçamento acima do vídeo */
+    border-radius: 10px; /* bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra para dar profundidade */
+}
+
+/*passo 7 aula 06*/
+a:link {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
