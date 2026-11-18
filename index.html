@@ -20,8 +20,8 @@
 
         <nav> 
           <ul>
-            <li><a href="#carros"> Carros </a> </a></li>
-            <li><a href="#aviao"> Aviões </a> </a></li>
+            <li><a href="#carros"> Carros </a> </li>
+            <li><a href="#aviao"> Aviões </a> </li>
             <li><a href="#motorhome"> MotorHome </a></li>
           </ul>
        </nav>
@@ -31,10 +31,38 @@
      <section class="container-introducao">
         <h2>Introdução</h2>
         <p>Viajar é uma experiência enriquecedora que nos permite explorar novos lugares, culturas e perspectivas. No entanto, a escolha do veículo de transporte pode influenciar significativamente a qualidade da viagem. Cada meio de transporte oferece vantagens e desvantagens distintas, que podem afetar o conforto, a conveniência e a experiência geral do viajante. Neste contexto, é essencial considerar cuidadosamente as opções disponíveis antes de tomar uma decisão.</p>
-
+      </section>
+            
 
     <section class="container-veiculos">
-  
+
+            <h2>Preencha o formulário: </h2> 
+
+
+             <form action="processar_formulario.php" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="contato">Contato:</label>
+                <input type="number" id="contato" name="contato" min="900000000" max="999999999" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+
+                <label for="veiculo">Como prefere viajar:</label>
+                <select id="veiculo" name="veiculo" required>
+                    <option value="">Selecione</option>
+                    <option value="carro">Carro</option>
+                    <option value="aviao">Avião</option>
+                    <option value="motorhome">MotorHome</option>
+                </select><br><br>
+
+                <button type="submit" >Enviar</button>
+            
+              </form>
+
              <h2>Você já sabe qual veículo escolher para uma viagem?</h2>
         
         <div class="bloco-veiculo" id="carros">
@@ -102,9 +130,9 @@
            <h4>Pontos Negativos </h4>
     
            <ul>
-                <li><strong>Limitações de espaço:</strong> O espaço interno é restrito, o que pode ser desconfortável para longas estadias ou para famílias maiores.
-                <li><strong>Manutenção e custos operacionais:</strong> Requer manutenção regular e pode ter custos elevados com combustível, seguro e reparos.
-                <li><strong>Dependência de infraestrutura:</strong> Necessita de locais adequados para estacionar e descarregar resíduos, o que pode limitar a liberdade em algumas regiões.
+              <li><strong>Limitações de espaço:</strong> O espaço interno é restrito, o que pode ser desconfortável para longas estadias ou para famílias maiores.
+              <li><strong>Manutenção e custos operacionais:</strong> Requer manutenção regular e pode ter custos elevados com combustível, seguro e reparos.
+              <li><strong>Dependência de infraestrutura:</strong> Necessita de locais adequados para estacionar e descarregar resíduos, o que pode limitar a liberdade em algumas regiões.
            </ul>
 
         </div>
