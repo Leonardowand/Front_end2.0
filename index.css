@@ -75,10 +75,10 @@ header nav ul {
     justify-content: center; /* centraliza os links horizontalmente */
     gap: 20px; /* espaçamento entre os links */
     padding: 15px;
-    background-color:#000000;;
+    background-color:#000000;
 }
 
-header nav ul li {
+header nav li {
     list-style: none;
     color: white;
     font-weight: bold;
@@ -118,7 +118,7 @@ header nav ul li:hover {
 .container-midia video {
     width: 640px; /* largura do vídeo */
     height: 360px; /* altura do vídeo */
-    margin-top: 20px; /* espaçamento acima do vídeo */
+    margin-top: 10px; /* espaçamento acima do vídeo */
     border-radius: 10px; /* bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra para dar profundidade */
 }
@@ -143,4 +143,15 @@ a:active {
     color: var(--cor-principal);
     text-decoration: underline;
 }
+
+footer h3{
+    text-align: center;
+    margin-top: 70px;
+
+}
+footer p{
+
+    margin-top: 50px;
+}
+
 
