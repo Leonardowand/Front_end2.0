@@ -11,7 +11,6 @@
 </head>
  
 
-
 <body>
 
     <header>
@@ -20,9 +19,10 @@
 
         <nav> 
           <ul>
-            <li><a href="#carros"> Carros </a> </a></li>
-            <li><a href="#aviao"> Aviões </a> </a></li>
+            <li><a href="#carros"> Carros </a> </li>
+            <li><a href="#aviao"> Aviões </a> </li>
             <li><a href="#motorhome"> MotorHome </a></li>
+            <li><a href="#cruzeiro"> Cruzeiro</a></li>
           </ul>
        </nav>
   </header>   
@@ -31,16 +31,54 @@
      <section class="container-introducao">
         <h2>Introdução</h2>
         <p>Viajar é uma experiência enriquecedora que nos permite explorar novos lugares, culturas e perspectivas. No entanto, a escolha do veículo de transporte pode influenciar significativamente a qualidade da viagem. Cada meio de transporte oferece vantagens e desvantagens distintas, que podem afetar o conforto, a conveniência e a experiência geral do viajante. Neste contexto, é essencial considerar cuidadosamente as opções disponíveis antes de tomar uma decisão.</p>
+      </section>
+      
+      
+
+      <section class="container-formulario">
 
 
-    <section class="container-veiculos">
-  
-             <h2>Você já sabe qual veículo escolher para uma viagem?</h2>
+
+            <h2>Preencha o formulário: </h2> 
+
+
+             <form id="formulario-estilo" class="form" action="processar_formulario.php" method="post">
+
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="contato">Contato:</label>
+                <input type="number" id="contato" name="contato" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+
+                <label for="veiculo">Como prefere viajar:</label>
+                <select id="veiculo" name="veiculo" required>
+                    <option value="">Selecione</option>
+                    <option value="carro">Carro</option>
+                    <option value="aviao">Avião</option>
+                    <option value="motorhome">MotorHome</option>
+                </select><br><br>
+
+                <button type="submit" >Enviar</button>
+            
+              </form>
+
+              </section>
+
+              <h2>Você já sabe qual veículo escolher para uma viagem?</h2>
+
+              <section class="container-veiculos">
+
+             
         
         <div class="bloco-veiculo" id="carros">
 
           <h3>Carros</h3>
-          <img src="./img/carrov.jpg" alt="carro" width="200">
+          <img src="./img/carrov.jpg" alt="carro">
           <p> Viajar de carro é uma das formas mais clássicas de explorar o mundo, oferecendo uma dinâmica completamente diferente das viagens de avião ou comboio. Esta modalidade combina uma enorme sensação de liberdade com a necessidade de uma gestão logística rigorosa.
           Abaixo, encontram-se três grandes qualidades e três principais defeitos de fazer uma viagem de carro: </p>
 
@@ -55,9 +93,9 @@
         <h4> Defeitos (Desvantagens) </h4>
 
         <ul>
-         <li><strong>• Desgaste físico e cansaço do condutor:</strong> Conduzir durante muitas horas exige uma concentração constante. O trânsito, as condições meteorológicas ou estradas desconhecidas geram fadiga acumulada, o que exige paragens frequentes para descanso e pode reduzir a energia para aproveitar o destino.
-         <li><strong>• Imprevisibilidade e riscos mecânicos:</strong> Um furo num pneu, uma avaria no motor ou um acidente podem interromper os planos de imediato. Depender de um veículo significa estar sujeito a imprevistos logísticos e financeiros com oficinas ou serviços de assistência em viagem.
-         <li><strong>• Maior tempo de deslocação:</strong> Para destinos muito distantes, o carro consome dias inteiros de viagem que poderiam ser resolvidos em poucas horas de avião. Isto reduz o tempo líquido disponível para desfrutar efetivamente do local de férias.
+         <li><strong> Desgaste físico e cansaço do condutor:</strong> Conduzir durante muitas horas exige uma concentração constante. O trânsito, as condições meteorológicas ou estradas desconhecidas geram fadiga acumulada, o que exige paragens frequentes para descanso e pode reduzir a energia para aproveitar o destino.
+         <li><strong> Imprevisibilidade e riscos mecânicos:</strong> Um furo num pneu, uma avaria no motor ou um acidente podem interromper os planos de imediato. Depender de um veículo significa estar sujeito a imprevistos logísticos e financeiros com oficinas ou serviços de assistência em viagem.
+         <li><strong> Maior tempo de deslocação:</strong> Para destinos muito distantes, o carro consome dias inteiros de viagem que poderiam ser resolvidos em poucas horas de avião. Isto reduz o tempo líquido disponível para desfrutar efetivamente do local de férias.
          Se estiver a planear uma viagem destas, é essencial ponderar estas vantagens e desvantagens para decidir se o carro é a melhor opção para si.
         </ul>
        
@@ -65,67 +103,115 @@
 
         <div class="bloco-veiculo" id="aviao">
           <h3>Aviões</h3>
-          <img src="./img/aviao.jpg" alt="Avião" width="200">
+          <img src="./img/aviao.jpg" alt="Avião">
           <p>Os aviões oferecem uma forma rápida e eficiente de viajar para destinos distantes, economizando tempo e proporcionando conforto durante a viagem. No entanto, também apresentam desvantagens como restrições de bagagem, dependência das companhias aéreas e possíveis atrasos ou cancelamentos. </p>
          
             <h4> Pontos Positivos </h4>
 
            <ul>
-             <li><strong>Rapidez em longas distâncias:</strong> Permite percorrer milhares de quilômetros em poucas horas, viabilizando viagens internacionais ou conexões entre regiões distantes que levariam dias por terra.
+             <li><strong> Rapidez em longas distâncias:</strong> Permite percorrer milhares de quilômetros em poucas horas, viabilizando viagens internacionais ou conexões entre regiões distantes que levariam dias por terra.
              <li><strong> Segurança estatística:</strong> A aviação comercial é o meio de transporte mais seguro do mundo em relação à distância percorrida, devido aos rigorosos protocolos de manutenção e treinamento.
              <li><strong> Alcance global:</strong> Conecta destinos isolados, ilhas e diferentes continentes que seriam inacessíveis por carro, ônibus ou trem.
-            </ul>
+           </ul>
 
           <h4>Pontos Negativos </h4>
 
            <ul>
              <li><strong> Custo elevado e taxas extras:</strong> As passagens costumam ter preços altos, frequentemente acrescidos de cobranças adicionais para despachar bagagem, marcar assentos ou alterar datas.
-             <li><strong>Burocracia e tempo de espera:</strong> Exige chegada antecipada ao aeroporto para passar por check-in, controle de segurança e imigração, além do risco de atrasos ou cancelamentos por clima e malha aérea.
-             <li><strong>Desconforto físico e impacto ambiental:</strong> O espaço reduzido nas cabines econômicas e a baixa umidade causam fadiga em voos longos, somados à alta emissão de carbono por passageiro.
+             <li><strong> Burocracia e tempo de espera:</strong> Exige chegada antecipada ao aeroporto para passar por check-in, controle de segurança e imigração, além do risco de atrasos ou cancelamentos por clima e malha aérea.
+             <li><strong> Desconforto físico e impacto ambiental:</strong> O espaço reduzido nas cabines econômicas e a baixa umidade causam fadiga em voos longos, somados à alta emissão de carbono por passageiro.
             </ul>
 
         </div>
 
         <div class="bloco-veiculo" id="motorhome">
          <h3>MotorHome</h3>
-         <img src="./img/motorhome.jpg" alt="Motorhome" width="200">
-         <p>Os motorhomes oferecem uma forma flexível e autônoma de viajar, permitindo que os viajantes explorem rotas menos percorridas e desfrutem de uma experiência mais pessoal e adaptada às suas necessidades. No entanto, também apresentam desvantagens como limitações de espaço, manutenção mais complexa e possíveis problemas mecânicos durante a viagem. </p>
+         <img src="./img/motorhome.jpg" alt="Motorhome">
+         <p>Os motorhomes oferecem uma forma flexível e autônoma de viajar, permitindo que os viajantes explorem rotas menos percorridas e desfrutem de uma experiência mais pessoal e adaptada às suas necessidades. No entanto, também apresentam desvantagens como limitações de espaço, manutenção mais complexa e possíveis problemas mecânicos durante a viagem.
+        </p>
         
            <h4> Pontos Positivos </h4>
 
             <ul>
-             <li><strong>Liberdade de itinerário:</strong> Permite alterar planos de viagem a qualquer momento, explorando locais fora do roteiro turístico tradicional.
-             <li><strong>Conforto e conveniência:</strong> Oferece comodidades como cozinha, banheiro e cama, proporcionando uma experiência de viagem mais confortável e autossuficiente.
-             <li><strong>Economia em hospedagem:</strong> Reduz custos com hotéis ou pousadas, permitindo que os viajantes durmam em qualquer lugar permitido para estacionar o motorhome.
+             <li><strong> Liberdade de itinerário:</strong> Permite alterar planos de viagem a qualquer momento, explorando locais fora do roteiro turístico tradicional.
+             <li><strong> Conforto e conveniência:</strong> Oferece comodidades como cozinha, banheiro e cama, proporcionando uma experiência de viagem mais confortável e autossuficiente.
+             <li><strong> Economia em hospedagem:</strong> Reduz custos com hotéis ou pousadas, permitindo que os viajantes durmam em qualquer lugar permitido para estacionar o motorhome.
            </ul>
 
            <h4>Pontos Negativos </h4>
     
            <ul>
-                <li><strong>Limitações de espaço:</strong> O espaço interno é restrito, o que pode ser desconfortável para longas estadias ou para famílias maiores.
-                <li><strong>Manutenção e custos operacionais:</strong> Requer manutenção regular e pode ter custos elevados com combustível, seguro e reparos.
-                <li><strong>Dependência de infraestrutura:</strong> Necessita de locais adequados para estacionar e descarregar resíduos, o que pode limitar a liberdade em algumas regiões.
+              <li><strong> Limitações de espaço:</strong> O espaço interno é restrito, o que pode ser desconfortável para longas estadias ou para famílias maiores.
+              <li><strong> Manutenção e custos operacionais:</strong> Requer manutenção regular e pode ter custos elevados com combustível, seguro e reparos.
+              <li><strong> Dependência de infraestrutura:</strong> Necessita de locais adequados para estacionar e descarregar resíduos, o que pode limitar a liberdade em algumas regiões.
            </ul>
 
         </div>
-  
 
+<div class="bloco-veiculo" id="cruzeiro">
+
+        <h3>Cruzeiro</h3>
+        <img src="./img/cruzeiro.jpg" alt="cruzeiro">
+         <p>Viajar de cruzeiro é uma experiência incrível reúne transporte, hospedagem, alimentação e lazer em um só pacote. Você visita diferentes destinos sem precisar fazer e desfazer as malas a cada parada
+         </p>
+
+        <h4>Pontos Positivos</h4>
+        
+            <ul>
+             <li><strong> Praticidade entre destinos:</strong> Você conhece vários lugares na mesma viagem sem precisar arrumar e desfazer malas ou lidar com novos traslados a cada parada.
+             <li><strong> Refeições e lazer incluídos:</strong>Hospedagem, refeições principais e várias opções de entretenimento a bordo já fazem parte do pacote.
+             <li><strong> Conforto e comodidade:</strong> O navio funciona como um hotel flutuante, com serviços e atividades concentrados no mesmo espaço.
+            </ul>
+
+            <h4>Pontos Negativos</h4>
+          <ul>
+           <li><strong> Tempo limitado nas paradas:</strong>As escalas em cada porto costumam ser curtas, o que reduz a imersão na cultura local.
+           <li><strong> Gastos extras a bordo:</strong>Itens como internet, bebidas fora do pacote, excursões e serviços adicionais podem encarecer bastante a viagem.
+           <li><strong> Pouca flexibilidade e risco de alterações:</strong>O roteiro é fixo e escalas podem ser alteradas ou canceladas por fatores como o clima
+          </ul>
+
+
+  </div>
     </section>
 
-     </main>
-    
-    
+
+ <section class="container-midia">
+        <h2>Viajar é uma experiência única e enriquecedora, e a escolha do veículo certo pode fazer toda a diferença. </h2>
+        <p>Seja qual for a sua preferência, o importante é aproveitar cada momento da viagem e criar memórias inesquecíveis. </p>
+
+        <!-- escolhemos preload="metadata" para carregar apenas as informações basicas do vídeo, economizando banda -->
+        <video width="320" height="240" controls autoplay muted loop preload="metadata" poster="./img/imgposter.jpg">
+          <source src="./videos/viagem-ads.mp4" type="video/mp4">
+          <source src="./videos/viagem-ads.webm" type="video/webm">
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+        
+<p><strong>A arte de viajar não está apenas nos destinos que escolhemos, mas na forma como decidimos chegar até eles e vivenciar o caminho.</strong>
+</p>
+
+<p>Muitas vezes, criamos uma zona de conforto até mesmo nas nossas férias. Quando encontramos um formato de viagem que funciona — seja pegar um voo direto para um hotel confortável ou fazer o mesmo trajeto de carro todos os anos —, a tendência natural é repetir a fórmula. No entanto, variar o estilo das viagens transforma completamente a nossa percepção do mundo, desperta novos sentidos e nos tira do piloto automático. Cada meio de transporte e hospedagem impõe um ritmo próprio, exigindo diferentes níveis de adaptação e oferecendo recompensas únicas.
+</p>
+
+ </section>
+
+</main>
 
 
         <footer>
 
+<h3> Obrigado por acessar nosso site! ʕ•́ᴥ•̀ʔっ♡</h3>
+
+         <p>Abaixo estão alguns links úteis caso você tenha interesse:</p>
+
           <ul>
-            <li><a href="#">Carros</a></li>
-            <li><a href="#">Aviões</a></li>
-            <li><a href="#">MotorHome</a></li>
+            <li><a href="https://www.localiza.com/brasil/pt-br" target="_blank">Site de aluguel de Carros</a></li>
+            <li><a href="https://www.livelo.com.br" target="_blank">site de milhas</a></li>
+            <li><a href="https://www.santoinaciomotorhomes.com.br" target="_blank">Site de MotorHome</a></li>
+            <li><a href="https://www.costacruzeiros.com/navios/favolosa.html" target="blank">Site de passagens de Cruzeiro</a></li>
           </ul>
     
        </footer> 
 
+     <script src="script/script.js"></script>
 </body>
 </html>
